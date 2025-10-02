@@ -3,17 +3,17 @@ using UnityEngine.Rendering.Universal;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    private Rigidbody2D Nickoll;
+    private Rigidbody2D thae;
     private Animator Anim;
     private BoxCollider2D BoxCollider;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float speed;
     [SerializeField] private float jumpheight;
 
-    private void Awake()
+    private void Awake() 
     {
         //pega referências para RigidBody e Animator do gameObject
-        Nickoll = GetComponent<Rigidbody2D>();
+        thae = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         BoxCollider = GetComponent<BoxCollider2D>();
     }
@@ -22,7 +22,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         float HorizontalInput = Input.GetAxis("Horizontal");
 
-        Nickoll.velocity = new Vector2(HorizontalInput* speed,Nickoll.velocity.y);
+        thae.velocity = new Vector2(HorizontalInput* speed,thae.velocity.y);
 
         //Virar quando se mover direita/esquerda
         if (HorizontalInput > 0.01f)
@@ -40,7 +40,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
     private void jump()
     {
-        Nickoll.velocity = new Vector2(Nickoll.velocity.x, jumpheight);
+        thae.velocity = new Vector2(thae.velocity.x, jumpheight);
         Anim.SetTrigger("Jump");
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -52,3 +52,4 @@ public class NewBehaviourScript : MonoBehaviour
         return raycastHit.collider != null;
     }
 }
+
