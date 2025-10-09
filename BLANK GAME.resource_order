@@ -17,10 +17,11 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
-    {"name":"objGround","order":2,"path":"objects/objGround/objGround.yy",},
-    {"name":"objPlr","order":1,"path":"objects/objPlr/objPlr.yy",},
-    {"name":"Shader1","order":3,"path":"shaders/Shader1/Shader1.yy",},
-    {"name":"sprGround","order":2,"path":"sprites/sprGround/sprGround.yy",},
-    {"name":"sprWall","order":1,"path":"sprites/sprWall/sprWall.yy",},
+    {"name":"obj_ground","order":2,"path":"objects/obj_ground/obj_ground.yy",},
+    {"name":"obj_plr","order":1,"path":"objects/obj_plr/obj_plr.yy",},
+    {"name":"obj_trail","order":3,"path":"objects/obj_trail/obj_trail.yy",},
+    {"name":"spr_background","order":3,"path":"sprites/spr_background/spr_background.yy",},
+    {"name":"spr_ground","order":2,"path":"sprites/spr_ground/spr_ground.yy",},
+    {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
   ],
 }
