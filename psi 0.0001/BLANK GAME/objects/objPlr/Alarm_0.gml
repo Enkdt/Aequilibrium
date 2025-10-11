@@ -1,0 +1,1 @@
+var can_jump = true
