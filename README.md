@@ -7,14 +7,16 @@
 ![Static Badge](https://img.shields.io/badge/Asesprite-white?style=for-the-badge&logo=aseprite&logoColor=white&logoSize=auto&labelColor=%23547f60&color=%23628f6e)
 
 ### Sobre o jogo
- 
+
+
+
 ### Link do Jogo: [Hello!](aaaa)
 
 
 ### Créditos
-***[Lucas Rodrigues](https://github.com/LucasRGarciaz7)
-[Lorenzo Teixeira](https://github.com/singularsumo715)  
-[Nicollas Augusto](https://github.com/nicollas-ar)
-[Miguel Fernandes](https://github.com/miguelzf22)  
-[Nicholas Alcantara](https://github.com/NickollllokciN)  
-[Thales Endo](https://github.com/Enkdt)***
+***[Lucas Rodrigues](https://github.com/LucasRGarciaz7) <br>
+[Lorenzo Teixeira](https://github.com/singularsumo715)  <br>
+[Nicollas Augusto](https://github.com/nicollas-ar) <br>
+[Miguel Fernandes](https://github.com/miguelzf22)  <br>
+[Nicholas Alcantara](https://github.com/NickollllokciN) <br> 
+[Thales Endo](https://github.com/Enkdt)*** <br>
