@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"yNxEnemy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"yNxEnemy",
+  "parent":{
+    "name":"collisions",
+    "path":"folders/Scripts/collisions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"setGrounded",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"setGrounded",
+  "parent":{
+    "name":"collisions",
+    "path":"folders/Scripts/collisions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

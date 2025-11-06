@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"cdTick",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cdTick",
+  "parent":{
+    "name":"Cooldown",
+    "path":"folders/Scripts/Cooldown.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+delay = 60;
+spr_flip = 1;
+hit=false
+hitdelay=5
+life=20;
+shoot=false;
+alpha=0
+color=c_white
+xSpd = 0
+ySpd = 0
+grav = 0.375
+grounded = true
+knockbacked = false
