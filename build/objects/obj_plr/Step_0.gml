@@ -29,9 +29,15 @@ alpha  = lerp(alpha,0,0.1)
 
 if room==Menu_ass or room==Room8{
 	dead = true
+	camera_set_view_size(view_camera[0], 1000, 1000);
 }
 else{
 	dead = false
+}
+
+if (keyboard_check_pressed(vk_escape)) and room!=Menu_ass{
+		paused = !paused;
+		update_pause();
 }
 
 
@@ -259,7 +265,8 @@ if hp.count <= 0{
 		obj_boss1.bossdeath = false
 	}
 	room_goto(Room8)
-	hp.count = 10
+	dead = true
+	hp.count = 10;
 }
 
 if iframe.active{
