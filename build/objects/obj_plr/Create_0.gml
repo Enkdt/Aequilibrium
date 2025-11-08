@@ -2,21 +2,13 @@
 global.collisions = [obj_wallCollision,obj_groundCollision]
 global.evil_collide = [obj_enemy_follow, obj_enemy_shoot, obj_enemy_patrol, obj_spiek]
 
-paused = false;
-layer_name = "PauseLayer";
+//Outline shader
+sprite_scale = shader_get_uniform(SDR_Outline, "sprite_size");
+tex = sprite_get_texture(sprite_index,image_index);
 
-update_pause = function()
-{
-	if(paused)
-	{
-		layer_set_visible(layer_name, true)
-	}
-	else{
-		layer_set_visible(layer_name, false)
-	}
-}
-update_pause()
-
+//Texel
+tex_h = (1/sprite_height)*image_yscale;
+tex_w = (1/sprite_width)*image_xscale;
 //Plr
 ying = false
 

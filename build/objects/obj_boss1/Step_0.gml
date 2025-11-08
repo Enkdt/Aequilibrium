@@ -44,6 +44,7 @@ if bossstart{
 	
 	y=708
 	
+	exclamation_cd = max(exclamation_cd-1,0)
 	cooldown = max(cooldown-1,0)
 	swipe.cooldown=max(swipe.cooldown-1,0)
 	atk_cooldown = max(atk_cooldown-1,0)
@@ -60,14 +61,21 @@ if bossstart{
 		var hand = choose(hand_l,hand_r)
 		var side = 10
 		if hand==hand_l side=1 else side=-1
+		with(instance_create_layer(hand.x-64,400,"Instances",obj_trail)){
+			image_alpha=7
+			sprite_index=Sprite53
+			image_xscale=2
+			image_yscale=2
+		}
 		swipe.spd = swipe.distance/swipe.time
 		swipe.duration = swipe.distance
 		swipe.dir=point_direction(0,0,side,0)
 		swipe.active = true
 		swipe.hand = hand
+		swipe.cooldown = 60
 	}
 
-	if swipe.active{
+	if swipe.active and swipe.cooldown==0{
 		var hand = swipe.hand
 		var sped = swipe.spd
 		var dir = swipe.dir

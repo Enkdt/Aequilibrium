@@ -35,12 +35,6 @@ else{
 	dead = false
 }
 
-if (keyboard_check_pressed(vk_escape)) and room!=Menu_ass{
-		paused = !paused;
-		update_pause();
-}
-
-
 //X direction
 if !hBoosting{xInput = _right - _left}
 
@@ -319,3 +313,8 @@ yCollision(global.collisions);
 y+=ySpd
 
 window_center()
+//fullscreen toggle
+if keyboard_check_pressed(vk_f11)
+{
+	window_set_fullscreen(!window_get_fullscreen())
+}

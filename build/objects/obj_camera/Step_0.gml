@@ -1,8 +1,4 @@
-//fullscreen toggle
-if keyboard_check_pressed(vk_f11)
-{
-	window_set_fullscreen(!window_get_fullscreen())
-}
+
 
 //exit if there's no player
 if !instance_exists(obj_plr) exit;

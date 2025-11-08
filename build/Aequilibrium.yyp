@@ -95,6 +95,7 @@
     {"id":{"name":"obj_wallCollision","path":"objects/obj_wallCollision/obj_wallCollision.yy",},},
     {"id":{"name":"Menu_ass","path":"rooms/Menu_ass/Menu_ass.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Room10","path":"rooms/Room10/Room10.yy",},},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
     {"id":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},
@@ -163,6 +164,7 @@
     {"id":{"name":"spr_verticalBoost","path":"sprites/spr_verticalBoost/spr_verticalBoost.yy",},},
     {"id":{"name":"spr_wallCollision","path":"sprites/spr_wallCollision/spr_wallCollision.yy",},},
     {"id":{"name":"Sprite39","path":"sprites/Sprite39/Sprite39.yy",},},
+    {"id":{"name":"Sprite53","path":"sprites/Sprite53/Sprite53.yy",},},
     {"id":{"name":"Terrain_and_Props","path":"sprites/Terrain_and_Props/Terrain_and_Props.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
   ],
@@ -178,6 +180,7 @@
     {"roomId":{"name":"Room7","path":"rooms/Room7/Room7.yy",},},
     {"roomId":{"name":"Room8","path":"rooms/Room8/Room8.yy",},},
     {"roomId":{"name":"Room9","path":"rooms/Room9/Room9.yy",},},
+    {"roomId":{"name":"Room10","path":"rooms/Room10/Room10.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
