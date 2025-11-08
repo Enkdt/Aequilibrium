@@ -32,5 +32,5 @@
     "path":"sprites/spr_groundCollision/spr_groundCollision.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

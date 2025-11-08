@@ -5,12 +5,12 @@ var hSpecBoosting = colConditionCheck(0,0,obj_horizontalSpecBoost)
 keysCheck();
 buffers();
 //Debug
-//if keyboard_check(vk_control){
-//	room = Room7
-//	x = 70
-//	y = 680
-//	ySpd = 0
-//}
+if keyboard_check(vk_control){
+	room = Room7
+	x = 70
+	y = 680
+	ySpd = 0
+}
 
 if _switchKey and ying==false and colConditionCheck(0,0,obj_swapPlatform){
 	ying = true
@@ -70,13 +70,14 @@ else
 }
 
 //define sprite direction
-if xInput !=0{
-	image_xscale = xInput
+if !iframe.active and !parry.active and !dash.active{
+	if xInput !=0{
+		image_xscale = xInput
+	}
 }
 
 //Walk & sprint
 if xInput!=0{
-	image_xscale = xInput
 	if _sprintKey{
 		xSpd = xInput * mv[1];
 	}
@@ -256,7 +257,7 @@ if atk.active{
 var enemies = instance_place(x, y, global.evil_collide)
 if enemies and !enemies.knockbacked and iframe.active==false{
 	hp.count-=1;
-	iframe.active = true;
+	iframe.active = true
 }
 if hp.count <= 0{
 	if(instance_exists(obj_boss1)){
@@ -271,9 +272,11 @@ if hp.count <= 0{
 
 if iframe.active{
 	iframe.time = cdTick(iframe.time)
+	iframe.blink = (iframe.time div 3) mod 2
 	if iframe.time<=0{
 		iframe.active  = false;
 		iframe.time = 50;
+		iframe.blink = false
 	}
 }
 
@@ -285,6 +288,18 @@ if hSpecBoosting{
 	xSpd = 7 * image_xscale
 	ySpd = -3;
 }
+
+if instance_exists(obj_boss1){
+	if obj_boss1.activated{
+		_jumpKeyPressed  = false
+		_jumpKey = false
+		xSpd = 0
+		if ySpd <0{
+			ySpd = 0
+		}
+	}
+}
+
 //Declaração de colisões 
 xCollision(global.collisions);
 x+=xSpd
@@ -302,3 +317,5 @@ if walled and !grounded{
 //colisão do y, mesma lógica que o X
 yCollision(global.collisions);
 y+=ySpd
+
+window_center()

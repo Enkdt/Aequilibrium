@@ -1,5 +1,11 @@
 //Sprite control 
 mask_index = spr_plr_idle
+if iframe.blink{
+	image_alpha = 0
+}
+else{
+	image_alpha = 1
+}
 if !ying{
 	//if clibim {sprite_index = spr_plr_clibim}
 	if (!atk.active){

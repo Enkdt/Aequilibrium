@@ -12,10 +12,10 @@ update_pause = function()
 		layer_set_visible(layer_name, true)
 	}
 	else{
-		layer_set_visible(layer_name, false);
+		layer_set_visible(layer_name, false)
 	}
 }
-update_pause();
+update_pause()
 
 //Plr
 ying = false
@@ -94,6 +94,7 @@ hp = {
 iframe = {
 	active:true,
 	time:90,
+	blink:false
 }
 
 parry={
@@ -107,5 +108,4 @@ alpha = 0
 color = c_white
 
 dead = false
-
 //image_yscale=1.25

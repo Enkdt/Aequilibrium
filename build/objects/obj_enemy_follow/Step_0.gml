@@ -6,6 +6,7 @@ if hitdelay==0{
 }
 
 if(life<=0){
+	instance_create_layer(x,y-32,layer,obj_explosion)
 	instance_destroy();
 }
 chase.cooldown = max(chase.cooldown-1,0)

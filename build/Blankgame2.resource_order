@@ -1,0 +1,11 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"obj_gameOver","order":1,"path":"objects/obj_gameOver/obj_gameOver.yy",},
+    {"name":"Room8","order":1,"path":"rooms/Room8/Room8.yy",},
+    {"name":"spr_collision_parry","order":3,"path":"sprites/spr_collision_parry/spr_collision_parry.yy",},
+    {"name":"spr_collsion_atk","order":1,"path":"sprites/spr_collsion_atk/spr_collsion_atk.yy",},
+    {"name":"spr_nextdoor","order":1,"path":"sprites/spr_nextdoor/spr_nextdoor.yy",},
+    {"name":"spr_plr_sprint","order":2,"path":"sprites/spr_plr_sprint/spr_plr_sprint.yy",},
+  ],
+}
