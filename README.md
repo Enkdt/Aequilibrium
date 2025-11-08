@@ -8,10 +8,19 @@
 
 ### Sobre o jogo
 
+> "Do caos, floresce a esperança"
 
+Em um mundo onde o conhecimento e a imaturidade social cresceram em proporções desiguais, o caos se tornou a nova norma. O estresse emocional explodiu, dando origem às Síndromes: anomalias moleculares impossíveis de serem suportadas pelo corpo humano que transformaram indivíduos em super-humanos ou em catástrofes ambulantes.
 
-### Link do Jogo: [Hello!](aaaa)
+O Fim Foi Apenas o Começo.
 
+Sete indivíduos, portadores de Síndromes e sobreviventes do colapso interdimensional, foram lançados em diferentes linhas temporais. Eles viram o fim de tudo e agora carregam uma única missão: "Isso não pode acontecer de novo."
+
+Eles são os Exilados, nômades através do tempo com poderes inimagináveis e uma verdade terrível: seus próprios corpos corrompidos são a maior ameaça para as novas Terras.
+
+Você é um Exilado e, com suas novas habilidades, deve trazer o equilíbrio em meio a esse caos.
+
+Este é [Aequlibrium]()
 
 ### Créditos
 ***[Lucas Rodrigues](https://github.com/LucasRGarciaz7) <br>
