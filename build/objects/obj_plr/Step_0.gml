@@ -4,18 +4,18 @@ var hSpecBoosting = colConditionCheck(0,0,obj_horizontalSpecBoost)
 //chamada de funções buffer e keycheck, definidas no script
 keysCheck();
 buffers();
-//Debug
-if keyboard_check(vk_control){
-	room = Room7
-	x = 70
-	y = 680
-	ySpd = 0
+
+if keyboard_check_pressed(ord("B")){
+	room_goto(Room7)
+	x=128
+	y=224
 }
 
-if _switchKey and ying==false and colConditionCheck(0,0,obj_swapPlatform){
+
+if _switchKey and ying==false{
 	ying = true
 } 
-else if _switchKey and ying==true and colConditionCheck(0,0,obj_swapPlatform){
+else if _switchKey and ying==true{
 	ying = false
 }
 
@@ -64,7 +64,7 @@ else
 }
 
 //define sprite direction
-if !iframe.active and !parry.active and !dash.active{
+if !parry.active and !dash.active{
 	if xInput !=0{
 		image_xscale = xInput
 	}
@@ -72,7 +72,7 @@ if !iframe.active and !parry.active and !dash.active{
 
 //Walk & sprint
 if xInput!=0{
-	if _sprintKey{
+	if _sprintKey and ying{
 		xSpd = xInput * mv[1];
 	}
 	else{
@@ -126,21 +126,21 @@ if walljump.active {
 }
 
 //Ativação do dash
-if !ying{
+if !ying{ //Verifica se o player é o ying
 	if dash.delay == 0{
 		if _dashKeyPressed and dash.able and !dash.active{
-			dash.delay=40;
-			dash.able = false;
-			dash.active = true;
-			dash.spd = dash.distance/dash.time; 
-			dash.duration = dash.distance;
-			dash.dir = point_direction(0,0,image_xscale,0);
+			dash.delay = 40 //delay
+			dash.able = false //faz com que o player nao de mais de um dash
+			dash.active = true //ativa o dash
+			dash.spd = dash.distance/dash.time //calculo da velocidade
+			dash.duration = dash.distance
+			dash.dir = point_direction(0,0,image_xscale,0) //direção
 		}
 	}
 	//O que é ativado se dash estiver ativo :)
 	if dash.active{
-		ySpd = 0
-		xSpd = lengthdir_x(dash.spd, dash.dir)
+		ySpd = 0 //desativa a gravidade (mais ou menos)
+		xSpd = lengthdir_x(dash.spd, dash.dir) //faz o player andar em linha reta
 		//Trilha bonitinha
 		trail(0,0,1,obj_trail,c_black,0.7)
 		//Dash decrescer para não ficar infinita duração
@@ -155,7 +155,7 @@ if !ying{
 }
 
 //Parry
-if keyboard_check_pressed(ord("P")) and parry.delay==0 and !parry.active{
+if keyboard_check_pressed(ord("J")) and ying and parry.delay==0 and !parry.active{
 	parry.active=true
 	parry.timer=20
 	image_index=0
@@ -201,7 +201,11 @@ if atk.active{
 	xSpd *=0.3
 	
 	if(sprite_index!=spr_plr_atk){
-		sprite_index=spr_plr_atk
+		if !ying{
+			sprite_index=spr_plr_atk
+		} else {
+			sprite_index=spr_yin_atk
+		}
 		image_speed=1
 		ds_list_clear(hitByAttack)
 	}
@@ -243,31 +247,35 @@ if atk.active{
 	ds_list_destroy(hitByAttackNow)
 	mask_index=spr_plr_idle
 	if(image_index>image_number-1){
-		sprite_index=spr_plr_idle
+		if !ying{
+			sprite_index=spr_plr_idle
+		} else {
+			sprite_index=spr_yin_idle
+		}
 		atk.active=false
 	}
 }
 
-var enemies = instance_place(x, y, global.evil_collide)
-if enemies and !enemies.knockbacked and iframe.active==false{
-	hp.count-=1;
-	iframe.active = true
+var enemies = instance_place(x, y, global.evil_collide) //verifica se tem uma colisao colidindo com player
+if enemies and !enemies.knockbacked and iframe.active==false{ //verfica se o iframe nao ta ativo
+	hp.count-=1 //tira 1hp (uau)
+	iframe.active = true //ativa o iframe
 }
 if hp.count <= 0{
 	if(instance_exists(obj_boss1)){
 		obj_boss1.activated = false
 		obj_boss1.bossstart = false
-		obj_boss1.bossdeath = false
+		obj_boss1.bossdeath = false //pro boss nao buga
 	}
-	room_goto(Room8)
-	dead = true
-	hp.count = 10;
+	room_goto(Room8) //sala de game over
+	dead = true //mata o player
+	hp.count = 10 //reseta a vida para preparar o player para tentar de novo
 }
 
 if iframe.active{
-	iframe.time = cdTick(iframe.time)
-	iframe.blink = (iframe.time div 3) mod 2
-	if iframe.time<=0{
+	iframe.time = cdTick(iframe.time) //diminui o tempo
+	iframe.blink = (iframe.time div 3) mod 2 //pisca a cada tres frame
+	if iframe.time<=0{ //desativa
 		iframe.active  = false;
 		iframe.time = 50;
 		iframe.blink = false
@@ -308,6 +316,12 @@ if walled and !grounded{
 	}
 }
 
+if place_meeting(x+xSpd,y,obj_keydoor) and global.keysNum==3{
+	with(obj_keydoor){
+		instance_destroy()
+	}
+}
+
 //colisão do y, mesma lógica que o X
 yCollision(global.collisions);
 y+=ySpd
@@ -318,3 +332,4 @@ if keyboard_check_pressed(vk_f11)
 {
 	window_set_fullscreen(!window_get_fullscreen())
 }
+show_debug_message(dead)

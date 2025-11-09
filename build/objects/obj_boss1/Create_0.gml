@@ -1,4 +1,4 @@
-current_atk=1
+current_atk=0
 delay2=0
 cooldown = 0
 exclamation_cd = 0
@@ -19,10 +19,10 @@ swipe={
 	hand:0,
 	cooldown:0,
 }
-handisback=true
+handisback = true
 activated = false
 bossstart = false
-life = 30
-max_life = 30
+life = 150
+max_life = 150
 bossdeath = false
 attack_started = false

@@ -2,16 +2,16 @@ randomise()
 
 var doors = [door_1,door_2]
 
-show_debug_message(activated)
 if !activated and !bossdeath{
 	y=1600;
 }
+
 if activated and !obj_plr.dead{
 	for(var i = 0; i < array_length(doors); i++){
 		with(doors[i]){
 			move_towards_point(x,480,2)
 			if 480-y<2{
-				y=480
+				y=480 
 			}
 		}
 	}
@@ -30,7 +30,6 @@ if bossstart or bossdeath{
 }
 var last_atk = 0
 if bossstart{
-	
 	for(var i = 0; i < array_length(doors); i++){
 		if instance_exists(doors[i]){
 			doors[i].y=480
@@ -90,7 +89,7 @@ if bossstart{
 				speed = 0
 			last_atk = current_atk
 			current_atk = 0
-			atk_cooldown = 120
+			atk_cooldown = 60
 			swipe.cooldown = 60
 		}
 	}
@@ -112,7 +111,7 @@ if bossstart{
 		reps++
 		if reps >= 10{
 			current_atk = 0
-			atk_cooldown = 120
+			atk_cooldown = 90
 			last_atk = 3
 			reps = 0
 		}
@@ -141,7 +140,7 @@ if bossstart{
 			layer_set_visible("Effect_1",0)
 			current_atk = 0
 			last_atk = 4
-			atk_cooldown = 120
+			atk_cooldown = 90
 			reps = 0
 			attack_started = false
 		}

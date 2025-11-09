@@ -1,6 +1,7 @@
 //Colisões definidas como globais visando facilitar códigos
-global.collisions = [obj_wallCollision,obj_groundCollision]
+global.collisions = [obj_wallCollision,obj_groundCollision, obj_keydoor]
 global.evil_collide = [obj_enemy_follow, obj_enemy_shoot, obj_enemy_patrol, obj_spiek]
+global.keysNum=0
 
 //Plr
 ying = false
@@ -77,7 +78,7 @@ hp = {
 	mx: 10,
 }
 iframe = {
-	active:true,
+	active:false,
 	time:90,
 	blink:false
 }

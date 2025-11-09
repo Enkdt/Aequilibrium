@@ -18,12 +18,12 @@ function keysCheck(){	//Adiciona as keys que serão usadas
 	
 	//botões de habilidades de movimento
 	_sprintKey = keyboard_check(vk_shift)	
-	_dashKeyPressed = keyboard_check_pressed(ord("Q"))
+	_dashKeyPressed = keyboard_check_pressed(ord("J"))
 	_dashKeyPressed = clamp(_dashKeyPressed, 0, 1)
-	_mousekey = mouse_check_button(mb_left)
+	_mousekey = keyboard_check_pressed(ord("K"))
 
 	//botão de troca
-	_switchKey = keyboard_check_pressed(ord("J"))
+	_switchKey = keyboard_check_pressed(vk_control)
 }
 
 function buffers(){

@@ -38,5 +38,5 @@
     "name":"spr_swapCollision",
     "path":"sprites/spr_swapCollision/spr_swapCollision.yy",
   },
-  "visible":true,
+  "visible":false,
 }
