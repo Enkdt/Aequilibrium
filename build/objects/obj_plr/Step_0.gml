@@ -5,13 +5,6 @@ var hSpecBoosting = colConditionCheck(0,0,obj_horizontalSpecBoost)
 keysCheck();
 buffers();
 
-if keyboard_check_pressed(ord("B")){
-	room_goto(Room7)
-	x=128
-	y=224
-}
-
-
 if _switchKey and ying==false{
 	ying = true
 } 
