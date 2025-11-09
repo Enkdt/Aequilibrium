@@ -7,7 +7,7 @@ global.keysNum=0
 ying = false
 
 //Movimento
-mv = [3,9]
+mv = [3,6]
 
 //Pulo
 jump = {
