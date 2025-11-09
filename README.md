@@ -20,7 +20,7 @@ Eles são os Exilados, nômades através do tempo com poderes inimagináveis e u
 
 Você é um Exilado e, com suas novas habilidades, deve trazer o equilíbrio em meio a esse caos.
 
-Este é [[Aequlibrium]()
+Este é **Aequlibrium**
 [Link do website](https://aequilibriumgame.netlify.app/)
 
 ### Créditos
