@@ -1,0 +1,1 @@
+obj_boss1.activated=false
